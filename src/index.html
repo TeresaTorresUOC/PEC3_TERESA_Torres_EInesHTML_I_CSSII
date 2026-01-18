@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/tailwinds.css" />
+
+    <title>Inici · IV Jornades de Cuina Tradicional Valenciana</title>
+  </head>
+
+  <body class="font-body text-black">
+    <div
+      class="min-h-screen bg-cover bg-center"
+      style="background-image: url('./assets/images/index/culleres.png')"
+    >
+      
+    <div class="min-h-screen bg-black/50">
+      <header class="sticky top-0 z-20 border-b border-white/20 bg-black/40 backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 text-white">
+          <a class="font-title text-lg sm:text-xl" href="./index.html">IV Jornades</a>
+          <div class="flex items-center gap-3">
+            <a class="text-sm font-bold hover:underline underline-offset-4" href="#programa">Programa</a>
+            <a class="action-secondary" href="./extra.html">Inscripció</a>
+          </div>
+          </nav>
+        </header>
+
+        <main class="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-12 md:py-16">
+          <section class="grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div class="space-y-6 text-white lg:col-span-7">
+              <p class="info-pill bg-brand-amber text-black">Borriana · 23-25 gener 2026</p>
+
+              <h1 class="font-title text-4xl sm:text-5xl md:text-6xl leading-[0.95]">
+                IV Jornades de Cuina<br />
+                <span class="text-brand-amber">Tradicional Valenciana</span>
+              </h1>
+
+              <p class="max-w-xl text-base text-white/90 sm:text-lg">
+                Una portada en format pòster per celebrar la cuina de mercat, les receptes de l'horta i el
+                sabor mediterrani.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a class="action-primary" href="./extra.html">Vull apuntar-me</a>
+                <a class="action-secondary" href="#programa">Veure el programa</a>
+              </div>
+              <p class="text-sm font-bold text-white/80">
+                Tallers oberts · Degustacions guiades · Converses amb productors locals
+              </p>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2 lg:col-span-5">
+              <include
+                src="./views/components/info-stamp.html"
+                locals='{"label":"Localitzacio","value":"Placa Major","detail":"Escenari principal al centre historic"}'
+              ></include>
+              <include
+                src="./views/components/info-stamp.html"
+                locals='{"label":"Entrades","value":"Gratuites","detail":"Reserva anticipada online"}'
+              ></include>
+              <include
+                src="./views/components/info-stamp.html"
+                locals='{"label":"Torns","value":"3 dies","detail":"Matins i vesprades"}'
+              ></include>
+            </div>
+          </section>
+          <section id="programa" class="grid gap-6 md:grid-cols-3">
+            <include
+              src="./views/components/feature-card.html"
+              locals='{"tag":"Tallers","meta":"Cuina en viu","title":"Receptes de temporada","text":"Sessio practica amb producte fresc i consells per a casa.","bullet1":"Showcookings amb xefs locals","bullet2":"Mercat km 0 amb degustacio","bullet3":"Zona infantil amb activitats"}'
+            ></include>
+            <include
+              src="./views/components/feature-card.html"
+              locals='{"tag":"Taules","meta":"Debat obert","title":"Memoria i sostenibilitat","text":"Converses sobre tradicio, territori i futur gastronomic.","bullet1":"Patrimoni culinari valencia","bullet2":"Economia circular i proximitat","bullet3":"Innovacio amb arrels"}'
+            ></include>
+            <include
+              src="./views/components/feature-card.html"
+              locals='{"tag":"Ruta","meta":"Experiencia","title":"Mercats i llotja","text":"Recorreguts guiats per coneixer productors i sabors mariners.","bullet1":"Visites a la llotja del port","bullet2":"Tastos de citrics i oli","bullet3":"Tancament amb sopar popular"}'
+            ></include>
+          </section>
+
+          <include
+            src="./views/components/cta-panel.html"
+            locals='{"tag":"Places limitades","title":"Apunta-t a les jornades i rep el programa complet","text":"Completa la teua inscripcio i rep totes les activitats, horaris i mapes per gaudir de les jornades.","primaryUrl":"./extra.html#formulari","primaryLabel":"Reservar plaza","secondaryUrl":"./extra.html","secondaryLabel":"Mes informacio"}'
+          ></include>
+        </main>
+        <footer class="border-t border-white/20 bg-black/40">
+
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 text-white sm:flex-row">
+          <div class="flex items-center gap-4">
+              <img
+              class="h-8 w-auto"
+                src="./assets/images/footer/escut-borriana.webp"
+                alt="Ajuntament de Borriana"
+              />
+              <img
+              class="h-8 w-auto"
+                src="./assets/images/footer/Federacio-comerc.webp"
+                alt="Federacio de Comerc"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <a class="rounded-full bg-white/90 p-2" href="#" aria-label="Instagram">
+                <img class="h-4 w-4" src="./assets/images/footer/instagram.svg" alt="" />
+              </a>
+              <a class="rounded-full bg-white/90 p-2" href="#" aria-label="Facebook">
+                <img class="h-4 w-4" src="./assets/images/footer/facebook.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

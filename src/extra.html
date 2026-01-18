@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/tailwinds.css" />
+
+    <title>Inscripció i info · IV Jornades de Cuina Tradicional Valenciana</title>
+  </head>
+  <body class="bg-slate-50 font-body text-black">
+    <header class="border-b border-black/10 bg-white/90 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+        <a class="font-title text-lg sm:text-xl" href="./index.html">IV Jornades</a>
+        <div class="flex items-center gap-3">
+          <a class="text-sm font-bold hover:underline underline-offset-4" href="./index.html">Portada</a>
+          <a class="action-primary" href="#formulari">Inscripció</a>
+        </div>
+      </nav>
+    </header> 
+
+    <main class="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-10 md:py-16">
+      <section class="grid gap-8 lg:grid-cols-12">
+        <div class="space-y-4 lg:col-span-7">
+          <p class="info-pill bg-brand-amber text-black">Participa</p>
+          <h1 class="font-title text-3xl sm:text-4xl md:text-5xl">Inscripció i informació ampliada</h1>
+          <p class="max-w-2xl text-base text-black/70 sm:text-lg">
+            Aquí podreu trobar tot el necessari per poder accedir a les jornades gastronòmiques, tant si sou participant o només expectador.
+          </p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:col-span-5">
+          <include
+            src="./views/components/info-stamp.html"
+            locals='{"label":"Atencio","value":"09:00-20:00","detail":"Mostradors i atencio directa"}'
+          ></include>
+          <include
+            src="./views/components/info-stamp.html"
+            locals='{"label":"Equip","value":"12 persones","detail":"Xefs, productors i voluntariat"}'
+          ></include>
+          <include
+            src="./views/components/info-stamp.html"
+            locals='{"label":"Seu","value":"Casa de la Cultura","detail":"A 5 minuts de la placa"}'
+          ></include>
+        </div>
+      </section>
+
+      <section class="surface-card space-y-5" aria-labelledby="gallery-title">
+        <div>
+          <h2 class="font-title text-2xl" id="gallery-title">Galeria de plats</h2>
+          <p class="text-sm text-black/70">Plats que representen les arrels i l'evolucio de la cuina valenciana.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <figure class="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <img
+            class="h-48 w-full object-cover"
+            src="./assets/images/extra/paella-valenciana.webp"
+            alt="Paella valenciana tradicional"/>
+            <figcaption class="px-3 py-2 text-sm text-black/70">Paella valenciana</figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <img
+              class="h-48 w-full object-cover"
+              src="./assets/images/extra/arros-al-forn.webp"
+              alt="Cassola d'arros al forn amb cigrons i botifarra"
+            />
+            <figcaption class="px-3 py-2 text-sm text-black/70">Arros al forn</figcaption> 
+          </figure>
+          <figure class="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <img
+              class="h-48 w-full object-cover"
+              src="./assets/images/extra/fideu-mar.webp"
+              alt="Fideua marinera amb allioli suau"
+            />
+            <figcaption class="px-3 py-2 text-sm text-black/70">Fideuà</figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <img
+            class="h-48 w-full object-cover"
+            src="./assets/images/extra/dolcos_valencia.webp"
+            alt="Safata de dolcos valencians amb taronja"
+          />
+          <figcaption class="px-3 py-2 text-sm text-black/70">Mocadorà</figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <img
+              class="h-48 w-full object-cover"
+              src="./assets/images/extra/suquet-peix.webp"
+              alt="Suquet de peix amb patata i cloisses"
+            />
+            <figcaption class="px-3 py-2 text-sm text-black/70">Suquet de peix</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <include
+        src="./views/components/cta-panel.html"
+        locals='{"tag":"Inscripcions","title":"Vols reservar una plaça per als tallers?","text":"Completa el formulari i rebras un correu amb els horaris, localitzacions i recomanacions de transport.","primaryUrl":"#formulari","primaryLabel":"Anar al formulari","secondaryUrl":"./index.html","secondaryLabel":"Tornar al poster"}'></include>
+
+      <div id="formulari" class="grid gap-6 lg:grid-cols-2">
+        <section class="surface-card space-y-4" aria-labelledby="inscripcio-title">
+          <div class="space-y-2">
+            <p class="text-xs font-bold uppercase tracking-wide text-black/60">Formulari d'inscripció</p>
+            <h2 class="font-title text-2xl" id="inscripcio-title">Reserva la teua plaza</h2>
+            <p class="text-sm text-black/70">
+              Indica les teues dades i el torn preferit; rebras un correu de confirmacio amb el programa complet.
+            </p>
+          </div>
+          <form
+            class="space-y-4"
+            name="inscripcio-jornades"
+            method="post"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="inscripcio-jornades" />
+            <p class="sr-only">
+              <label>Si ets huma, deixa aquest camp buit <input name="bot-field" /></label>
+            </p>
+            <div class="space-y-3">
+              <div class="space-y-1">
+                <label class="text-sm font-semibold" for="registre-nom">Nom i cognoms</label>
+                <input
+                  class="w-full rounded-lg border border-black/20 px-3 py-2"
+                  type="text"
+                  id="registre-nom"
+                  name="nom"
+                  placeholder="Nom complet"
+                  required
+                />
+              </div>
+              <div class="space-y-1">
+                <label class="text-sm font-semibold" for="registre-email">Correu electrònic</label>
+                <input
+                  class="w-full rounded-lg border border-black/20 px-3 py-2"
+                  type="email"
+                  id="registre-email"
+                  name="email"
+                  placeholder="nom@exemple.com"
+                  required
+                />
+              </div>
+              <div class="space-y-1">
+                <label class="text-sm font-semibold" for="registre-telefon">Telèfon de contacte</label>
+                <input
+                  class="w-full rounded-lg border border-black/20 px-3 py-2"
+                  type="tel"
+                  id="registre-telefon"
+                  name="telefon"
+                  placeholder="600 000 000"
+                />
+              </div>
+              <div class="space-y-1">
+                <label class="text-sm font-semibold" for="registre-modalitat">Modalitat</label>
+                <select
+                  class="w-full rounded-lg border border-black/20 px-3 py-2"
+                  id="registre-modalitat"
+                  name="modalitat"
+                  required
+                >
+                  <option value="">Tria una opció</option>
+                  <option>Pack complet 3 dies</option>
+                  <option>Dissabte i diumenge</option>
+                  <option>Tastos de vesprada</option>
+                </select>
+              </div>
+              <div class="space-y-1">
+                <label class="text-sm font-semibold" for="registre-comentaris">Comentaris o allergies</label>
+                <textarea
+                  class="w-full rounded-lg border border-black/20 px-3 py-2"
+                  id="registre-comentaris"
+                  name="comentaris"
+                  rows="3"
+                  placeholder="Escriu qualsevol detall rellevant"
+                ></textarea>
+              </div>
+              <div class="flex items-start gap-2">
+                <input
+                  class="mt-1 h-4 w-4 rounded border border-black/30"
+                  type="checkbox"
+                  id="registre-politica"
+                  name="politica"
+                  required
+                />
+                <label class="text-sm text-black/70" for="registre-politica">
+                  Accepta la politica de dades de les jornades
+                </label>
+              </div>
+            </div>
+            <button class="action-primary w-full sm:w-auto" type="submit">Confirmar inscripció</button>
+          </form>
+        </section>
+        
+        <section class="surface-card space-y-4" aria-labelledby="form-title"></section>
+          <div class="space-y-2">
+            <h2 class="font-title text-2xl" id="form-title">Contacte</h2>
+            <p class="text-sm text-black/70">Per a inscripcions, informació general o propostes de tallers.</p>
+          </div>
+          <form
+            class="space-y-4"
+            name="contacte-jornades"
+            method="post"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            >
+            <input type="hidden" name="form-name" value="contacte-jornades" />
+            <p class="sr-only">
+              <label>Si ets huma, deixa aquest camp buit <input name="bot-field" /></label>
+            </p>
+            <div class="space-y-1">
+              <input
+                class="w-full rounded-lg border border-black/20 px-3 py-2"
+                type="text"
+                id="full-name"
+                name="nom"
+                placeholder="Nom i cognoms"
+                required
+              />
+            </div>
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="email">Correu electrònic</label>
+              <input
+                class="w-full rounded-lg border border-black/20 px-3 py-2"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nom@exemple.com"
+                required
+              />
+            </div>
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="tipus">Tipus de consulta</label>
+              <select class="w-full rounded-lg border border-black/20 px-3 py-2" id="tipus" name="tipus" required>
+                <option value="">Selecciona una opció</option>
+                <option>Inscripció</option>
+                <option>Informació general</option>
+                <option>Proposta de taller</option>
+              </select>
+            </div>
+            <div class="space-y-1">
+              <label class="text-sm font-semibold" for="missatge">Missatge</label>
+              <textarea
+                class="w-full rounded-lg border border-black/20 px-3 py-2"
+                id="missatge"
+                name="missatge"
+                rows="4"
+                placeholder="Escriu el teu missatge"
+              ></textarea>
+            <div class="flex items-start gap-2">
+              <input
+                class="mt-1 h-4 w-4 rounded border border-black/30"
+                type="checkbox"
+                id="politiques"
+                name="politiques"
+                required
+              />
+              <label class="text-sm text-black/70" for="politiques">
+                Accepto la política de dades de les jornades
+              </label>
+            </div>
+            <button class="action-secondary w-full sm:w-auto" type="submit">Enviar missatge</button>
+            <p class="text-xs text-black/60">* Formulari preparat per a Netlify Forms.</p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="border-t border-black/10 bg-white">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row">
+        <div class="flex items-center gap-4">
+          <img class="h-8 w-auto" src="./assets/images/footer/escut-borriana.webp" alt="Ajuntament de Borriana" />
+          <img class="h-8 w-auto" src="./assets/images/footer/Federacio-comerc.webp" alt="Federacio de Comerc" />
+        </div>
+        <div class="flex items-center gap-2">
+          <a class="rounded-full bg-brand-mint p-2" href="#" aria-label="Instagram">
+            <img class="h-4 w-4" src="./assets/images/footer/instagram.svg" alt="" />
+          </a>
+          <a class="rounded-full bg-brand-mint p-2" href="#" aria-label="Facebook">
+            <img class="h-4 w-4" src="./assets/images/footer/facebook.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

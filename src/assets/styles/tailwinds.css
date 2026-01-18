@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .action-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-orange px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:opacity-90;
+  }
+
+  .action-secondary {
+    @apply inline-flex items-center justify-center rounded-full border-2 border-black/80 px-5 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-black hover:text-white;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm;
+  }
+
+  .info-pill {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-mint px-4 py-2 text-xs font-bold uppercase tracking-wide text-black;
+  }
+}
